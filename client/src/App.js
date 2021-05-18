@@ -1,8 +1,9 @@
-import './App.css';
+import './css/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from "react";
 import axios from "axios";
 
+/* Navbar */
 import Navbar from './components/navbar/Navigation'
 
 function App() {

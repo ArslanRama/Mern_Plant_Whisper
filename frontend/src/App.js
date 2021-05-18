@@ -1,6 +1,9 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from "react";
 import axios from "axios";
+
+import Navbar from './components/navbar/Navigation'
 
 function App() {
   // const state = {
@@ -26,6 +29,7 @@ function App() {
 
   return (
     <div className="App">
+    <Navbar/>
       <header className="App-header">
         <h1>MERN FULL STACK</h1>
         <h3>{successMsg}</h3>

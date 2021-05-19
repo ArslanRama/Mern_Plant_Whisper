@@ -12,25 +12,26 @@ export const Gallery = (props) => {
       })
   }, [])
   return (
-    
+
     <div id='portfolio' className='text-center'>
       <div className='container'>
         <div className='section-title'>
           <h2>Gallery</h2>
           <p>
-          We don’t settle for boring plants. From the tropical jungles of Colombia to the Danish greenhouses right through to the hot Thai wilderness, we will go to the end of the Earth to find the rarest and most interesting plants for your home.
+            We don’t settle for boring plants. From the tropical jungles of Colombia to the Danish greenhouses right through to the hot Thai wilderness, we will go to the end of the Earth to find the rarest and most interesting plants for your home.
           </p>
         </div>
         {
-                plants.map((item, index)=>{
-                    return(
-                        <Col key={index}>
-                        <h3>Plant Name: {item.name}</h3>
-                        <img src={item.plantPic} alt='' />
-                        </Col>
-                    )
-                })
-                }
+          plants.map((item, index) => {
+            return (
+              <Col key={index}>
+                <h3>Plant Name: {item.name}</h3>
+                <h4>Picture<img src={item.plantPic} alt='' /></h4>
+
+              </Col>
+            )
+          })
+        }
         <div className='row'>
           <div className='portfolio-items'>
             <div className='col-sm-6 col-md-4 col-lg-4'>

@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const Plant = require('../models/Plant');
 const multer = require('multer');
-// settings for multer
+//!  Multer Settings
 const storage = multer.diskStorage({
     destination: function(req, file, callback) {
         callback(null, 'public/images')
@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
 const upload = multer({storage});
 
 router.post('/add', upload.single('plantPic'),(req, res)=>{
-    // data from frontend UI
+    //! Data from Client
     console.log(req.body, req.file)
     const newPlant = new Plant({
         name: req.body.name,

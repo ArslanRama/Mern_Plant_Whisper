@@ -7,10 +7,11 @@ export const Plants = (props) => {
     const [name, setName] = useState('');
     const [picture, setPicture] = useState();
     const [successMsg, setSuccessMsg] = useState();
+
     const getName = (event) => {
         setName(event.target.value)
     }
-    // add plant data to backend
+    // add plant data to server
     const add = (event) => {
         event.preventDefault();
         console.log(picture)
@@ -43,9 +44,8 @@ export const Plants = (props) => {
                 <div id='plants' className='text-center'>
                     <div className='container'>
                         <div className='section-title'>
-                            <h2>Add a plant to database</h2>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-                                dapibus leonec.</p>
+                            <h2>Like to add your favourite plant to our gallery?</h2>
+                            <h1> To be human is to experience biophilia.</h1>
                             {
                                 successMsg != null &&
                                 <Alert variant="success">
@@ -55,12 +55,20 @@ export const Plants = (props) => {
                         </div>
                         <Form onSubmit={add}>
                         <Form.Group controlId="plantName">
-                    <Form.Control type="text" placeholder="Type a plant name" onChange={getName} name="name"/>
+                    <Form.Control 
+                    type="text" 
+                    placeholder="Type a plant name" 
+                    onChange={getName} 
+                    name="name"/>
                 </Form.Group>
                 <Form.Group>
-                    <Form.File id="exampleFormControlFile1" label="Upload a Picture" onChange={selectPic} name="plantPic"/>
+                    <Form.File 
+                    id="exampleFormControlFile1" 
+                    label="Upload a Picture" 
+                    onChange={selectPic} 
+                    name="plantPic"/>
                 </Form.Group>
-                        <Button variant="primary"
+                        <Button variant="primary" 
                             type="submit"
                             onClick={add}>
                             Add to Plant Wisper

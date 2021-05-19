@@ -17,13 +17,15 @@ mongoose.connect(DB_URL, {
 })
     .then(() => console.log('MongoDB database is successfully connected'))
     .catch(() => console.log('Database connection failed!'))
+
+app.use(express.static(__dirname + '/public'));
 app.use(cors());
 
 app.use(express.json())
 
 //! routes as REST API for frontend
 app.use('/plant', plantRouter);
-app.post('/user/data', (req, res)=> {
+app.post('/user/data', (req, res) => {
     // some data from frontend react UI
     console.log(req.body)
     // Save data to database

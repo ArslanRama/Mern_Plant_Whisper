@@ -1,4 +1,4 @@
-import { Row, Col } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 import axios from "axios";
 import { useEffect, useState } from "react";
 export const Gallery = (props) => {
@@ -17,7 +17,7 @@ export const Gallery = (props) => {
         <div className='section-title'>
           <h2>Gallery</h2>
           <p>
-            You can find all the plants here
+          We don’t settle for boring plants. From the tropical jungles of Colombia to the Danish greenhouses right through to the hot Thai wilderness, we will go to the end of the Earth to find the rarest and most interesting plants for your home.
           </p>
         </div>
                 {

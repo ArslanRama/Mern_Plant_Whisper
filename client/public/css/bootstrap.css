@@ -3115,20 +3115,20 @@ fieldset[disabled] .btn-default.focus {
 }
 .btn-primary {
   color: #fff;
-  background-color: #3c8313;
-  border-color: #2e6da4;
+  background-color: #5ca9fb;
+  background-image: linear-gradient(to right, #258109 0%, #38ca0b 100%);
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 25px;
+  transition: all 0.5s linear;
+  border: 0;
   margin-bottom: 20px;
 }
-.btn-primary:focus,
-.btn-primary.focus {
-  color: #fff;
-  background-color: #286090;
-  border-color: #122b40;
-}
+
 .btn-primary:hover {
   color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
+  background-color: #5ca9fb;
+  background-image: linear-gradient(to right, #205885 0%, #a629ee 100%);
 }
 .btn-primary:active,
 .btn-primary.active,

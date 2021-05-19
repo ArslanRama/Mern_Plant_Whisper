@@ -1,3 +1,4 @@
+
 export const Gallery = (props) => {
   return (
     <div id='portfolio' className='text-center'>
@@ -5,9 +6,9 @@ export const Gallery = (props) => {
         <div className='section-title'>
           <h2>Gallery</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-            dapibus leonec.
+           You can find all the plants here
           </p>
+
         </div>
         <div className='row'>
           <div className='portfolio-items'>

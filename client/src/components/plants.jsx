@@ -1,3 +1,4 @@
+import React from 'react';
 import { Row, Col, Form, Button } from "react-bootstrap";
 import { useState } from "react";
 import axios from "axios";
@@ -14,8 +15,7 @@ export const Plants = (props) => {
                 console.log(successMsg)
             })
     }
-
-
+    
     return (
         <Row>
             <Col>
@@ -43,3 +43,4 @@ export const Plants = (props) => {
         </Row>
     )
 }
+export default Plants

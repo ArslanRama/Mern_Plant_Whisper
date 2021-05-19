@@ -6,6 +6,6 @@ const plantSchema = new Schema({
 })
 
 // declare Schema as a model
-const Plant = mongoose.model('Plants', plantSchema) 
+const Plant = mongoose.model('Plant', plantSchema) 
 // export User Model
 module.exports = Plant; 

@@ -8,12 +8,14 @@ export const Plants = (props) => {
         setName(event.target.value)
     }
     const add = () => {
-        axios.post('http://localhost:5000/plant/add', { name })
+        axios.post('http://localhost:8000/plant/add', { name })
             .then(response => {
                 const successMsg = response.data
                 console.log(successMsg)
             })
     }
+
+
     return (
         <Row>
             <Col>
@@ -30,10 +32,11 @@ export const Plants = (props) => {
                                 onChange={getName} />
                         </Form.Group>
                         <Button variant="primary"
-                            type="button"
-                            onClick={add}>
-                            Add to Plant Wisper
-                </Button>
+                                type="button"
+                                onClick={add}>
+                                Add to Plant Wisper
+                           </Button>
+
                     </div>
                 </div>
             </Col>

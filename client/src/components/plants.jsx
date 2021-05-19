@@ -8,6 +8,7 @@ export const Plants = (props) => {
     const [picture, setPicture] = useState();
     const [successMsg, setSuccessMsg] = useState();
 
+    // this function will update plants 
     const getName = (event) => {
         setName(event.target.value)
     }
@@ -17,8 +18,8 @@ export const Plants = (props) => {
         console.log(picture)
         // collect all data from form
         const formData = new FormData();
-        formData.append('name', name)
-        formData.append('plantPic', picture);
+        formData.append('name', name) // add plant name to formData obj
+        formData.append('plantPic', picture); // add plant picture to formData obj
         // configuaration for file type input
         const config = {
             headers: {

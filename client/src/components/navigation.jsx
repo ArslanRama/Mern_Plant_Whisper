@@ -14,10 +14,11 @@ export const Navigation = (props) => {
             <span className='icon-bar'></span>{' '}
             <span className='icon-bar'></span>{' '}
             <span className='icon-bar'></span>{' '}
-          </button>
+          </button> 
+          <img src='/img/logo.jpg' width='50' alt='' href='#page-top'/>{' '} 
           <a className='navbar-brand page-scroll' href='#page-top'>
-            Plant Whisper
-          </a>{' '}
+            Plant Whisper 
+          </a>{' '} 
         </div>
 
         <div

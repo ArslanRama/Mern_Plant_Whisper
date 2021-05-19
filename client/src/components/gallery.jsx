@@ -1,15 +1,35 @@
-
+import { Row, Col } from "react-bootstrap";
+import axios from "axios";
+import { useEffect, useState } from "react";
 export const Gallery = (props) => {
+
+  const [plants, setPlants] = useState([])
+  useEffect(() => {
+    axios.get('http://localhost:8000/plant/all')
+      .then(response => {
+        console.log(response.data)
+        setPlants(response.data)
+      })
+  }, [])
   return (
     <div id='portfolio' className='text-center'>
       <div className='container'>
         <div className='section-title'>
           <h2>Gallery</h2>
           <p>
-           You can find all the plants here
+            You can find all the plants here
           </p>
-
         </div>
+        {
+                plants.map((item, index)=>{
+                    return(
+                        <Col key={index}>
+                        <h3>Plant Name: {item.name}</h3>
+                        <img src={item.plantPic}/>
+                        </Col>
+                    )
+                })
+            }
         <div className='row'>
           <div className='portfolio-items'>
             <div className='col-sm-6 col-md-4 col-lg-4'>

@@ -1,9 +1,7 @@
 {
     "Header": {
-
         "title": "What is a plant whisperer?",
         "paragraph": "Set your space for summer with our new plant bundles, back-in-stock planters, and live & dried cut stems."
-
     },
     "About": {
         "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -20,7 +18,8 @@
             "Lorem ipsum dolor"
         ]
     },
-    "Services": [{
+    "Services": [
+        {
             "icon": "fa fa-leaf",
             "name": "Lorem ipsum dolor",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
@@ -50,23 +49,22 @@
             "name": "Lorem ipsum dolor",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
         }
-
-
     ],
-    "Testimonials": [{
+    "Testimonials": [
+        {
             "img": "img/testimonials/01.jpg",
-            "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+            "text": "\"A pine is any conifer in the genus Pinus  of the family Pinaceae. Pinus is the sole genus in the subfamily Pinoideae. The Plant List compiled by the Royal Botanic Gardens, Kew and Missouri Botanica.\"",
             "name": "Pine"
         },
         {
             "img": "img/testimonials/02.jpg",
-            "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-            "name": "Coco"
+            "text": "\"Coca is any of the four cultivated plants in the family Erythroxylaceae, native to western South America. Coca is known for its psychoactive alkaloid, cocaine.\"",
+            "name": "Coca"
         },
         {
             "img": "img/testimonials/03.jpg",
-            "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-            "name": "Nut"
+            "text": "\"A botanical name is a formal scientific name conforming to the International Code of Nomenclature for algae, fungi, and plants (ICN) and, if it concerns a plant cultigen, the additional cultivar or Group epithets must conform to the International Code of Nomenclature for Cultivated Plants (ICNCP).\"",
+            "name": "Botanical"
         },
         {
             "img": "img/testimonials/04.jpg",
@@ -75,16 +73,17 @@
         },
         {
             "img": "img/testimonials/04.jpg",
-            "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-            "name": "Pineapp"
+            "text": "\"Amaranth: From the Greek word for “unfading,” Amaranth are grain-producing plants that have flowers and foliage in a range of colors from reds and purples to golds and greens.\"",
+            "name": "Amaranth"
         },
         {
             "img": "img/testimonials/06.jpg",
-            "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-            "name": "Pineapple"
+            "text": "\"Ash: The common English name for the ash tree derives from the Old English æsc, which means “spear.” If you’re looking for something a little softer, Ashley means “ash tree clearing.”\"",
+            "name": "Ash"
         }
     ],
-    "Team": [{
+    "Team": [
+        {
             "img": "img/team/01.jpg",
             "name": "Annoying Orange",
             "job": "Director"
@@ -93,7 +92,8 @@
             "img": "img/team/02.jpg",
             "name": "Hey Pear",
             "job": "Jam Maker"
-        }, {
+        },
+        {
             "img": "img/team/03.jpg",
             "name": "Hey Apple",
             "job": "Juice Maker"
@@ -112,7 +112,8 @@
         "twitter": "twitter.com",
         "youtube": "youtube.com"
     },
-    "Features": [{
+    "Features": [
+        {
             "icon": "fa fa-comments-o",
             "title": "Lorem ipsum",
             "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."

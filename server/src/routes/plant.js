@@ -20,7 +20,7 @@ router.post('/add', upload.single('plantPic'),(req, res)=>{
         plantPic: '/images/'+ req.file.filename
     })
     newPlant.save((err, doc)=>{
-        res.json('A new Plant has been added!')
+        res.json('A new plant has been added!')
     })
 })
 

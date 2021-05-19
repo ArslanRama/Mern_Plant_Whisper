@@ -20,16 +20,16 @@ export const Gallery = (props) => {
             You can find all the plants here
           </p>
         </div>
-        {
+                {
                 plants.map((item, index)=>{
                     return(
                         <Col key={index}>
                         <h3>Plant Name: {item.name}</h3>
-                        <img src={item.plantPic}/>
+                        <img src={item.plantPic} alt='' />
                         </Col>
                     )
                 })
-            }
+                }
         <div className='row'>
           <div className='portfolio-items'>
             <div className='col-sm-6 col-md-4 col-lg-4'>

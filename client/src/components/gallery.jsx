@@ -1,7 +1,8 @@
+
 import { Col } from "react-bootstrap";
 import axios from "axios";
 import { useEffect, useState } from "react";
-export const Gallery = (props) => {
+export const Gallery= () =>{
 
   const [plants, setPlants] = useState([])
   useEffect(() => {
@@ -13,7 +14,7 @@ export const Gallery = (props) => {
   }, [])
   return (
 
-    <div id='portfolio' className='text-center'>
+    <div id='gallery' className='text-center'>
       <div className='container'>
         <div className='section-title'>
           <h2>Gallery</h2>
@@ -26,7 +27,7 @@ export const Gallery = (props) => {
             return (
               <Col key={index}>
                 <h3>Plant Name: {item.name}</h3>
-                <h4>Picture<img src={item.plantPic} alt='' /></h4>
+                <h4>Picture<img src={item.plantPic} alt={item.plantPic} /></h4>
 
               </Col>
             )

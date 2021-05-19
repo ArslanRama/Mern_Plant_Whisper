@@ -3,10 +3,10 @@ const Plant = require('../models/Plant');
 const multer = require('multer');
 //!  Multer Settings
 const storage = multer.diskStorage({
-    destination: function(req, file, callback) {
+    destination: (req, file, callback)=> {
         callback(null, 'public/images')
     },
-    filename: function(req, file, callback) {
+    filename: (req, file, callback)=> {
         callback(null, Date.now() +'_'+ file.originalname)
     }
 });

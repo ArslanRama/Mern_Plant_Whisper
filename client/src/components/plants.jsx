@@ -12,8 +12,14 @@ export const Plants = (props) => {
     const getName = (event) => {
         setName(event.target.value)
     }
+
+     // this function will update picture data
+     const selectPlantPic = (event) => {
+        setPicture(event.target.files[0]);
+    }
+    
     // add plant data to server
-    const add = (event) => {
+    const addPlant = (event) => {
         event.preventDefault();
         console.log(picture)
         // collect all data from form
@@ -33,12 +39,9 @@ export const Plants = (props) => {
                 console.log(successMsg)
                 setSuccessMsg(response.data)
             })
+            .catch((err) => console.log(err));
     }
-    // this function will update picture data
-    const selectPic = (event) => {
-        setPicture(event.target.files[0]);
-    }
-
+   
     return (
         <Row>
             <Col>
@@ -52,29 +55,33 @@ export const Plants = (props) => {
                                 <Alert variant="success">
                                     {successMsg}
                                 </Alert>
+
                             }
+                        
                         </div>
-                        <Form onSubmit={add}>
-                        <Form.Group controlId="plantName">
-                    <Form.Control 
-                    type="text" 
-                    placeholder="Type a plant name" 
-                    onChange={getName} 
-                    name="name"/>
-                </Form.Group>
-                <Form.Group>
-                    <Form.File 
-                    id="exampleFormControlFile1" 
-                    label="Upload a Picture" 
-                    onChange={selectPic} 
-                    name="plantPic"/>
-                </Form.Group>
-                        <Button variant="primary" 
-                            type="submit"
-                            onClick={add}>
-                            Add to Plant Wisper
+
+                        <Form onSubmit={addPlant}>
+                        
+                            <Form.Group controlId="plantName">
+                                <Form.Control
+                                    type="text"
+                                    placeholder="Type a plant name"
+                                    onChange={getName}
+                                    name="name" />
+                            </Form.Group>
+                            <Form.Group>
+                                <Form.File
+                                    id="exampleFormControlFile1"
+                                    label="Upload a Picture"
+                                    onChange={selectPlantPic}
+                                    name="plantPic" />
+                            </Form.Group>
+                            <Button variant="primary"
+                                type="submit"
+                                onClick={addPlant}>
+                                Add to Plant Wisper
                            </Button>
-                           </Form>
+                        </Form>
 
                     </div>
                 </div>

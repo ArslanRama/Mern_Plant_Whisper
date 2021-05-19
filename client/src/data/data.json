@@ -20,34 +20,34 @@
     },
     "Services": [
         {
-            "icon": "fa fa-leaf",
-            "name": "Lorem ipsum dolor",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+          "icon": "fa fa-leaf",
+          "name": "Joy",
+          "text": "Every exposure to nature—from caring for plants to just sharing a space with organic elements—promotes a sense of peace and enhances overall wellbeing."
         },
         {
-            "icon": "fa fa-pagelines",
-            "name": "Consectetur adipiscing",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+          "icon": "fa fa-connectdevelop",
+          "name": "Connection",
+          "text": "Relationships define the quality of your life. We’re here to nurture connections between people and plants and the places they both thrive."
         },
         {
-            "icon": "fa fa-leaf",
-            "name": "Lorem ipsum dolor",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+          "icon": "fa fa-users",
+          "name": "Growth",
+          "text": "A growth company is any company whose business generates significant positive cash flows or earnings, which increase at significantly faster rates but we believe in quality and deliver best possible products."
         },
         {
-            "icon": "fa fa-leaf",
-            "name": "Lorem ipsum dolor",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+          "icon": "fa fa-tree",
+          "name": "Eco-Friendly",
+          "text": "Lively Root grows and ships its eco-friendly plants from its nursery in San Marcos, California, and developed a proprietary boxing and shipping system to make sure the greenery arrives to its customers as fresh"
         },
         {
-            "icon": "fa fa-pagelines",
-            "name": "Consectetur adipiscing",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+          "icon": "fa fa-globe",
+          "name": "Transparency",
+          "text": "Cultivating our spaces—both the places we inhabit and our internal realms, allows us to reflect, restore, and transform for the better."
         },
         {
-            "icon": "fa fa-pagelines",
-            "name": "Lorem ipsum dolor",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+          "icon": "fa fa-pagelines",
+          "name": "Communication",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
         }
     ],
     "Testimonials": [

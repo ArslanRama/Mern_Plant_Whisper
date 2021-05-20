@@ -72,14 +72,12 @@ export const Plants = (props) => {
                             <Form.Group>
                                 <Form.File
                                     id="exampleFormControlFile1"
-                                    label="Upload a Picture"
                                     onChange={selectPlantPic}
                                     name="plantPic" />
                             </Form.Group>
                             <Button variant="primary"
-                                type="submit"
-                                onClick={addPlant}>
-                                Add to Plant Wisper
+                                type="submit">
+                                Upload to Plant Wisper
                            </Button>
                         </Form>
 

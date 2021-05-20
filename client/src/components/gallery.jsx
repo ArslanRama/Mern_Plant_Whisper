@@ -27,8 +27,7 @@ export const Gallery= () =>{
             return (
               <Col key={index}>
                 <h3>Plant Name: {item.name}</h3>
-                <h4>Picture<img src={item.plantPic} alt={item.plantPic} /></h4>
-
+                <h4>Picture<img src={`http://localhost:8000/${item.plantPic}`} alt=''></img> </h4>
               </Col>
             )
           })

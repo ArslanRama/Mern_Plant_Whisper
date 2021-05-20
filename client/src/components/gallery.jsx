@@ -5,8 +5,10 @@ import { useEffect, useState } from "react";
 export const Gallery= () =>{
   const [plants, setPlants] = useState([])
   const [updated, setUpdated] = useState(false);
+  
   //! Delete Function
   const deletePlant = (id) => {
+    // id.preventDefault();
     setUpdated(!updated);
     const removePlantId = id;
     axios
@@ -14,16 +16,23 @@ export const Gallery= () =>{
         removePlantId,
       })
       .then((response) => console.log(response.data));
+      //! it will return the new value at /gallery
+      // axios.get(`http://localhost:8000/plant/all`).then(res=>{
+      //   console.log(res.data);
+      //   setPlants(res.data);
+      // })
   };
+
+  
   useEffect(() => {
     axios.get('http://localhost:8000/plant/all')
       .then(response => {
         console.log(response.data)
         setPlants(response.data)
+        console.log(plants);
       })
   }, [])
   return (
-
     <div id='gallery' className='text-center'>
       <div className='container'>
         <div className='section-title'>
@@ -35,12 +44,12 @@ export const Gallery= () =>{
         {
           plants.map((item, index) => {
             return (
-              <Col key={index._id}>
+              <Col key={item._id}>
                 <h3>Plant Name: {item.name}</h3>
-                <h4>Picture<img src={`http://localhost:8000/${item.plantPic}`} alt='' ></img> </h4>
+                <h4><img src={`http://localhost:8000/${item.plantPic}`} alt='' ></img> </h4>
                 <button
                     className="btn btn-danger"
-                    onClick={() => deletePlant(index._id)}
+                    onClick={() => deletePlant(item._id)}
                   >Delete</button>
               </Col>
             )

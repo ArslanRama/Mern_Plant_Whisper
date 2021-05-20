@@ -3,8 +3,18 @@ import { Col } from "react-bootstrap";
 import axios from "axios";
 import { useEffect, useState } from "react";
 export const Gallery= () =>{
-
   const [plants, setPlants] = useState([])
+  const [updated, setUpdated] = useState(false);
+  //! Delete Function
+  const deletePlant = (id) => {
+    setUpdated(!updated);
+    const removePlantId = id;
+    axios
+      .post(`http://localhost:8000/plant/delete/${removePlantId}`, {
+        removePlantId,
+      })
+      .then((response) => console.log(response.data));
+  };
   useEffect(() => {
     axios.get('http://localhost:8000/plant/all')
       .then(response => {
@@ -25,9 +35,13 @@ export const Gallery= () =>{
         {
           plants.map((item, index) => {
             return (
-              <Col key={index}>
+              <Col key={index._id}>
                 <h3>Plant Name: {item.name}</h3>
-                <h4>Picture<img src={`http://localhost:8000/${item.plantPic}`} alt=''></img> </h4>
+                <h4>Picture<img src={`http://localhost:8000/${item.plantPic}`} alt='' ></img> </h4>
+                <button
+                    className="btn btn-danger"
+                    onClick={() => deletePlant(index._id)}
+                  >Delete</button>
               </Col>
             )
           })

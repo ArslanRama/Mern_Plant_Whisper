@@ -10,6 +10,7 @@ const storage = multer.diskStorage({
         callback(null, Date.now() +'_'+ file.originalname)
     }
 });
+
 const upload = multer({storage});
 
 router.post('/add', upload.single('plantPic'),(req, res)=>{
@@ -23,6 +24,16 @@ router.post('/add', upload.single('plantPic'),(req, res)=>{
         res.json('A new plant has been added!')
     })
 })
+
+//! delete the plant
+const deletePlant = (req, res) => {
+    const plantId = req.body.removePlantId;
+    console.log(plantId);
+    Plant.findByIdAndDelete(plantId, (err, doc) => {
+      console.log("Item is successfully deleted:", doc);
+    });
+  };
+router.post("/delete/:id", deletePlant);
 
 router.get('/all', (req, res)=>{
     Plant.find((err, plants)=>{

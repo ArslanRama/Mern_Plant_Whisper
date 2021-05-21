@@ -1,11 +1,17 @@
 import React from 'react';
-import { Row, Col, Form, Button, Alert } from "react-bootstrap";
+import { Row, Col, Form, Button } from "react-bootstrap";
 import { useState } from "react";
 import axios from "axios";
 
 export const Plants = (props) => {
+    // const [plantState, setPlantState]= useState({
+    //     name:"",
+    //     plantOrigin:"",
+    //     plantPic:""
+    // })
     const [name, setName] = useState('');
     const [picture, setPicture] = useState();
+    const [origin, setOrigin] = useState('');
     const [successMsg, setSuccessMsg] = useState();
 
     // this function will update plants 
@@ -13,19 +19,24 @@ export const Plants = (props) => {
         setName(event.target.value)
     }
 
-     // this function will update picture data
-     const selectPlantPic = (event) => {
+    // this function will update picture data
+    const selectPlantPic = (event) => {
         setPicture(event.target.files[0]);
     }
-    
+
+    const plantOrigin = (event) => {
+        setOrigin(event.target.value)
+    }
+
     // add plant data to server
-    const addPlant = (event) => {
-        event.preventDefault();
+    const addPlant = (e) => {
+        e.preventDefault();
         console.log(picture)
         // collect all data from form
-        const formData = new FormData();
-        formData.append('name', name) // add plant name to formData obj
-        formData.append('plantPic', picture); // add plant picture to formData obj
+        const plantData = new FormData();
+        plantData.append('name', name) // add plant name to formData obj
+        plantData.append('plantPic', picture); 
+        plantData.append('plantOrigin', origin)// add plant picture to formData obj
         // configuaration for file type input
         const config = {
             headers: {
@@ -33,7 +44,7 @@ export const Plants = (props) => {
             }
         }
         // todo: how to make below absolute path to relative path
-        axios.post('http://localhost:8000/plant/add', formData, config)
+        axios.post('http://localhost:8000/plant/add', plantData, config)
             .then(response => {
                 const successMsg = response.data
                 console.log(successMsg)
@@ -41,7 +52,7 @@ export const Plants = (props) => {
             })
             .catch((err) => console.log(err));
     }
-   
+
     return (
         <Row>
             <Col>
@@ -50,31 +61,43 @@ export const Plants = (props) => {
                         <div className='section-title'>
                             <h2>Like to add your favourite plant to our gallery?</h2>
                             <h1> To be human is to experience biophilia.</h1>
-                            {
-                                successMsg != null &&
-                                <Alert variant="success">
-                                    {successMsg}
-                                </Alert>
-
-                            }
-                        
                         </div>
 
-                        <Form onSubmit={addPlant}>
-                        
+                        <Form inline onSubmit={addPlant}>
+
                             <Form.Group controlId="plantName">
                                 <Form.Control
                                     type="text"
                                     placeholder="Type a plant name"
                                     onChange={getName}
                                     name="name" />
+                                <Form.Control
+                                as="select"
+                                className="my-1 mr-sm-2"
+                                onChange={plantOrigin}
+                                name="plantOrigin"
+                                id="inlineFormCustomSelectPref"
+                                custom
+                            >
+                                <option value="0">Plant Origin</option>
+                                <option value="1">Africa</option>
+                                <option value="2">Asia</option>
+                                <option value="3">Asia</option>
+                                <option value="4">Europe</option>
+                                <option value="5">Oceania</option>
+                                <option value="6">South America</option>
+                                <option value="7">North America</option>
+                            </Form.Control>
                             </Form.Group>
                             <Form.Group>
                                 <Form.File
                                     id="exampleFormControlFile1"
                                     onChange={selectPlantPic}
                                     name="plantPic" />
-                            </Form.Group>
+                            </Form.Group>                     
+                            {successMsg != null &&
+                                <h4 variant="success">{successMsg}</h4>
+                            }
                             <Button variant="primary"
                                 type="submit">
                                 Upload to Plant Wisper

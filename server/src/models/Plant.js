@@ -3,7 +3,8 @@ const Schema = mongoose.Schema;
 // create a Schema 
 const plantSchema = new Schema({
     name: String,
-    plantPic: String
+    plantPic: String,
+    plantOrigin: String
 })
 
 // declare Schema as a model

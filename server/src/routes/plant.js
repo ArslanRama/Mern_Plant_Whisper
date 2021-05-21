@@ -21,7 +21,8 @@ router.post('/add', upload.single('plantPic'),(req, res)=>{
         plantPic: '/images/'+ req.file.filename
     })
     newPlant.save((err, doc)=>{
-        res.json('A new plant has been added!')
+        console.log(doc);
+        res.json('Congratulations! You have added your plant to our gallery!')
     })
 })
 

@@ -72,26 +72,23 @@ export const Plants = (props) => {
                                     onChange={getName}
                                     name="name" />
                                 <Form.Control
-                                as="select"
+                                as="select"                  
                                 className="my-1 mr-sm-2"
                                 onChange={plantOrigin}
                                 name="plantOrigin"
-                                id="inlineFormCustomSelectPref"
                                 custom
                             >
                                 <option value="0">Plant Origin</option>
-                                <option value="1">Africa</option>
-                                <option value="2">Asia</option>
-                                <option value="3">Asia</option>
-                                <option value="4">Europe</option>
-                                <option value="5">Oceania</option>
-                                <option value="6">South America</option>
-                                <option value="7">North America</option>
+                                <option value="Africa">Africa</option>
+                                <option value="Asia">Asia</option>
+                                <option value="Europe">Europe</option>
+                                <option value="Australia">Oceania</option>
+                                <option value="South America">South America</option>
+                                <option value="North America">North America</option>
                             </Form.Control>
                             </Form.Group>
                             <Form.Group>
                                 <Form.File
-                                    id="exampleFormControlFile1"
                                     onChange={selectPlantPic}
                                     name="plantPic" />
                             </Form.Group>                     

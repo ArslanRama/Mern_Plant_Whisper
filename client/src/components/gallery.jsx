@@ -40,23 +40,31 @@ export const Gallery = () => {
             We don’t settle for boring plants. From the tropical jungles of Colombia to the Danish greenhouses right through to the hot Thai wilderness, we will go to the end of the Earth to find the rarest and most interesting plants for your home.
           </p>
         </div>
-        {
+      
+        <div className='row'>
+          <div className='portfolio-items'>
+          
+          {
           plants.map((item, index) => {
             return (
-              <Col key={item._id}>
-                <h3>Name: {item.name}</h3>
-                <h3>Origin {item.plantOrigin}</h3>
-                <h4><img src={`http://localhost:8000/${item.plantPic}`} alt='Project Title' ></img> </h4>
+              <div key={item._id} className='col-sm-6 col-md-4 col-lg-4'>
+                <h4><img 
+                src={`http://localhost:8000/${item.plantPic}`}
+                width="200"
+                height="150"
+                alt='Project Title' >
+                </img>
+                <p>{item.name}</p>
+                <p>Origin: {item.plantOrigin}</p>
+                </h4>
                 <button
                     className="btn btn-danger"
                     onClick={() => deletePlant(item._id)}
                   >Delete</button>
-              </Col>
+              </div>
             )
           })
         }
-        <div className='row'>
-          <div className='portfolio-items'>
             <div className='col-sm-6 col-md-4 col-lg-4'>
               <div className='portfolio-item'>
                 <div className='hover-bg'>

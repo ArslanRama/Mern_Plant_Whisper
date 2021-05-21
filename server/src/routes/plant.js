@@ -18,6 +18,7 @@ router.post('/add', upload.single('plantPic'),(req, res)=>{
     console.log(req.body, req.file)
     const newPlant = new Plant({
         name: req.body.name,
+        plantOrigin: req.body.plantOrigin,
         plantPic: '/images/'+ req.file.filename
     })
     newPlant.save((err, doc)=>{

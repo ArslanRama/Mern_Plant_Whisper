@@ -1,5 +1,4 @@
 import axios from "axios";
-import { Row, Col,  } from "react-bootstrap";
 import { useEffect, useState } from "react";
 export const Gallery = () => {
   const [plants, setPlants] = useState([])

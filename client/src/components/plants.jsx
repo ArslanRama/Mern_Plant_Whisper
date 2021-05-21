@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Form, Button } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import { useState } from "react";
 import axios from "axios";
 
@@ -54,11 +54,9 @@ export const Plants = (props) => {
     }
 
     return (
-        <Row>
-            <Col>
                 <div id='plants' className='text-center'>
                     <div className='container'>
-                        <div className='section-title'>
+                        <div className='section-title text-center'>
                             <h2>Like to add your favourite plant to our gallery?</h2>
                             <h1> To be human is to experience biophilia.</h1>
                         </div>
@@ -103,8 +101,6 @@ export const Plants = (props) => {
 
                     </div>
                 </div>
-            </Col>
-        </Row>
     )
 }
 export default Plants

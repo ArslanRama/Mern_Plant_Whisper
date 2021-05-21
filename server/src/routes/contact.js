@@ -10,7 +10,7 @@ router.post('/send',(req, res)=>{
 
     newContact.save((err, doc)=>{
         console.log(doc)
-        res.json('Thank you for your Msg! We will get in touch soon')
+        res.json('Thank you for your message! We will get in touch with you soon')
     })
 })
 

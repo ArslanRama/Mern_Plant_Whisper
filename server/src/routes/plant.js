@@ -35,7 +35,7 @@ router.get('/all', (req, res) => {
         res.json(plants)
     }).populate('added_by')
 })
-// find one plant by id
+
 router.get('/detail/:id', (req, res) => {
     Plant.findById(req.params.id, (err, doc) => {
         res.json(doc)

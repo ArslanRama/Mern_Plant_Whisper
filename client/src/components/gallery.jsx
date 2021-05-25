@@ -14,15 +14,11 @@ export const Gallery = () => {
         removePlantId,
       })
       .then((response) => console.log(response.data));
-    //! it will return the new value at /gallery
-    // axios.get(`http://localhost:8000/plant/all`).then(res=>{
-    //   console.log(res.data);
-    //   setPlants(res.data);
-    // })
   };
 
 
   useEffect(() => {
+    //! it will return the new value at /gallery
     axios.get('http://localhost:8000/plant/all')
       .then(response => {
         console.log(response.data)

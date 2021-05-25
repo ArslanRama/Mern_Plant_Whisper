@@ -14,12 +14,12 @@ export const Plants = (props) => {
     const [origin, setOrigin] = useState('');
     const [successMsg, setSuccessMsg] = useState();
 
-    // this function will update plants 
+    //! update plants 
     const getName = (event) => {
         setName(event.target.value)
     }
 
-    // this function will update picture data
+    //! update picture data
     const selectPlantPic = (event) => {
         setPicture(event.target.files[0]);
     }
@@ -28,7 +28,7 @@ export const Plants = (props) => {
         setOrigin(event.target.value)
     }
 
-    // add plant data to server
+    //! add plant data to server
     const addPlant = (e) => {
         e.preventDefault();
         console.log(picture)

@@ -32,7 +32,7 @@ const deletePlant = (req, res) => {
     const plantId = req.body.removePlantId;
     console.log(plantId);
     Plant.findByIdAndDelete(plantId, (err, doc) => {
-      console.log("Item is successfully deleted:", doc);
+      console.log("The picture is successfully deleted:", doc);
     });
   };
 router.post("/delete/:id", deletePlant);

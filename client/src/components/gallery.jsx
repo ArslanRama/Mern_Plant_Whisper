@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 export const Gallery = () => {
   const [plants, setPlants] = useState([])
   const [updated, setUpdated] = useState(false);
+  const [deleteMsg, setDeleteMsg] = useState();
 
   //! Delete Function
   const deletePlant = (id) => {
@@ -50,6 +51,7 @@ export const Gallery = () => {
                 alt='Project Title' >
                 </img>
                 <p>{item.name}</p>
+                <p>Added by: {item.added_by.username}</p>
                 <p>Origin: {item.plantOrigin}</p>
                 </h4>
                 <button

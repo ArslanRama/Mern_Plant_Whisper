@@ -26,12 +26,12 @@ app.use(cors());
 app.use(express.json())
 
 //! routes as REST API for frontend
-app.get('/user/data', (req, res) => {
-    res.json('test work')
-})
-app.use('/user/create',(req, res)=>{
-    res.json('test work')
-})
+// app.get('/user/data', (req, res) => {
+//     res.json('test work')
+// })
+// app.use('/user/create',(req, res)=>{
+//     res.json('test work')
+// })
 //! testing INSOMNIA
 app.get('/login', (req, res) => {
     res.status(200).json({ msg: 'login page' })
@@ -46,6 +46,7 @@ app.post('/login', (req, res) => {
 })
 
 app.use('/plant', plantRouter);
+app.use('/user', userRouter);
 app.post('/user/data', (req, res) => {
     // some data from frontend react UI
     console.log(req.body)

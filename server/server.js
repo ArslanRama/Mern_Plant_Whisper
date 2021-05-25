@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const plantRouter = require('./src/routes/plant')
 const contactRouter = require('./src/routes/contact')
+const userRouter = require('./src/routes/user')
 // client connectection 
 const cors = require('cors')
 //! MongoDB and dotenv
@@ -26,7 +27,10 @@ app.use(express.json())
 
 //! routes as REST API for frontend
 app.get('/user/data', (req, res) => {
-    res.json('test worj')
+    res.json('test work')
+})
+app.use('/user/create',(req, res)=>{
+    res.json('test work')
 })
 //! testing INSOMNIA
 app.get('/login', (req, res) => {

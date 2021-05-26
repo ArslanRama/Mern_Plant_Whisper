@@ -1,4 +1,5 @@
- export const Home = (props) => {
+
+export const Home = (props) => {
   return (
     <div id='home' className='text-center'>
       <div className='container'>

@@ -1,25 +1,31 @@
+import React from "react";
+import "./App.scss";
+import { Login, Register } from "./components/login/index";
 
-export const Home = (props) => {
-  return (
-    <div id='home' className='text-center'>
-      <div className='container'>
-        <div className='col-md-10 col-md-offset-1 section-title'>
-          <h2>Home</h2>
-        </div>
-        <div className='row'>
-          {props.data
-            ? props.data.map((d, i) => (
-                <div key={`${d.title}-${i}`} className='col-xs-6 col-md-3'>
-                  {' '}
-                  <i className={d.icon}></i>
-                  <h3>{d.title}</h3>
-                  <p>{d.text}</p>
-                </div>
-              ))
-            : 'Loading...'}
+export default class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLogginActive: true
+    };
+  }
+
+  render() {
+    const { isLogginActive } = this.state;
+    const current = isLogginActive ? "Register" : "Login";
+    return (
+      <div className="App">
+        <div className="login">
+          <div className="container" ref={ref => (this.container = ref)}>
+            {isLogginActive && (
+              <Login containerRef={ref => (this.current = ref)} />
+            )}
+            {!isLogginActive && (
+              <Register containerRef={ref => (this.current = ref)} />
+            )}
+          </div>
         </div>
       </div>
-    </div>
-  )
+    );
+  }
 }
-

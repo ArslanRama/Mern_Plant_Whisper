@@ -4,9 +4,9 @@ const User = require('../models/User')
 // get should be post here if u use req.session or post
 router.get('/create', (req, res)=>{
     const user= {
-        email: 'aslan@gmail.com',
-        password: '1234',
-        username: 'Rama'
+        email: '',
+        password: '',
+        username: ''
     }
     // save a user
     const newUser = new User(user);

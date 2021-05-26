@@ -1,3 +1,5 @@
+import {Register} from './Register';
+
 export const Home = (props) => {
   return (
     <div id='home' className='text-center'>
@@ -17,6 +19,7 @@ export const Home = (props) => {
               ))
             : 'Loading...'}
         </div>
+        <Register/>
       </div>
     </div>
   )

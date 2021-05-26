@@ -1,22 +1,8 @@
 const router = require('express').Router();
 const User = require('../models/User')
 const bcrypt= require('bcrypt')
-// todo: create a signup and signin form and routes 
-// get should be post here if u use req.session or post
-/* router.get('/create', (req, res)=>{
-    const user= {
-        email: '',
-        password: '',
-        username: ''
-    }
-    // save a user
-    const newUser = new User(user);
-    newUser.save((err, doc)=>{
-        res.json(doc)
-    })
-}) */
 
-//REGISTER
+//! REGISTER
 router.post("/register", async (req, res) => {
     try {
       //generate new password
@@ -39,7 +25,7 @@ router.post("/register", async (req, res) => {
     }
   });
   
-  //LOGIN
+  //! LOGIN
   router.post("/login", async (req, res) => {
     try {
       //find user

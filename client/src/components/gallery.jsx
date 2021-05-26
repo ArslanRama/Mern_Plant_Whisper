@@ -83,7 +83,7 @@ export const Gallery = () => {
                       alt='Project Title' >
                     </img>
                       <p>{item.name}</p>
-                      <p>Added by: {item.added_by.username}</p>
+                      {/* <p>Added by: {item.added_by.username}</p> */}
                       <p>Origin: {item.plantOrigin}</p>
                     </h4>
                     <button

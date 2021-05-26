@@ -21,7 +21,7 @@ router.post('/add', upload.single('plantPic'), (req, res) => {
         plantOrigin: req.body.plantOrigin,
         plantPic: '/images/' + req.file.filename,
         // todo: this id should come from session or user login or req.body
-        added_by: '60acff09ae55b6da5a7800cf'
+        added_by: '/login'
     })
     newPlant.save((err, doc) => {
         console.log(doc);

@@ -3,7 +3,7 @@ const app = express();
 const plantRouter = require('./src/routes/plant')
 const contactRouter = require('./src/routes/contact')
 const userRouter = require('./src/routes/user')
-// client connectection 
+// client connectection
 const cors = require('cors')
 //! MongoDB and dotenv
 require('dotenv').config()
@@ -34,7 +34,7 @@ app.post('/user/data', (req, res) => {
     // some data from frontend react UI
     console.log(req.body)
     // Save data to database
-    // change or use data and send back message to fronend 
+    // change or use data and send back message to fronend
     res.json({
         msg: 'successfully received!',
         username: req.body.username,

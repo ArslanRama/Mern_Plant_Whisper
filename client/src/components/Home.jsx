@@ -1,4 +1,3 @@
-import {Register} from './Register';
 
 export const Home = (props) => {
   return (
@@ -19,7 +18,6 @@ export const Home = (props) => {
               ))
             : 'Loading...'}
         </div>
-        <Register/>
       </div>
     </div>
   )

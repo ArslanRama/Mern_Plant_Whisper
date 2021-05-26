@@ -3,7 +3,7 @@ const app = express();
 const plantRouter = require('./src/routes/plant')
 const contactRouter = require('./src/routes/contact')
 const userRouter = require('./src/routes/user')
-// client connectection
+// client connection
 const cors = require('cors')
 //! MongoDB and dotenv
 require('dotenv').config()

@@ -18,6 +18,7 @@
   "homepage": "https://github.com/ArslanRama/mern_app_mygarden#readme",
   "dependencies": {
     "concurrently": "^6.1.0",
+    "express": "^4.17.1",
     "react-hook-form": "^7.6.2"
   }
 }

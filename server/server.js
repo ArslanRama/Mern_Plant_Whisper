@@ -25,28 +25,11 @@ app.use(cors());
 
 app.use(express.json())
 
-//! routes as REST API for frontend
-// app.get('/user/data', (req, res) => {
-//     res.json('test work')
-// })
-// app.use('/user/create',(req, res)=>{
-//     res.json('test work')
-// })
-//! testing INSOMNIA
-app.get('/login', (req, res) => {
-    res.status(200).json({ msg: 'login page' })
-})
-app.post('/login', (req, res) => {
-    const { username, password } = req.body
-    if (username === 'Aslan' && password === '123456') {
-        return res.status(200).json({ msg: 'logged in successfully' })
-    }
-        res.json({ msg: 'wrong password' })
-
-})
-
+//! Routing
 app.use('/plant', plantRouter);
 app.use('/user', userRouter);
+app.use('/contact', contactRouter);
+
 app.post('/user/data', (req, res) => {
     // some data from frontend react UI
     console.log(req.body)
@@ -60,20 +43,6 @@ app.post('/user/data', (req, res) => {
 })
 
 
-
-app.use('/contact', contactRouter);
-/* app.post('/user/msg', (req, res) => {
-    console.log(req.body)
-    res.json({
-        msg: 'Thanks for your Msg! we will get in touch soon ',
-        name: req.body.name,
-        email: req.body.email,
-        message: req.body.email
-
-    })
-}) */
-
-// 
 
 //! listen app with port
 app.listen(PORT, () => {

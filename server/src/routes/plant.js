@@ -31,9 +31,9 @@ router.post('/add', upload.single('plantPic'), (req, res) => {
 //! find all plants
 router.get('/all', (req, res) => {
     Plant.find((err, plants) => {
-        console.log(plants)
+        // console.log(plants)
         res.json(plants)
-    }).populate('added_by')
+    }).populate('added_by').sort({_id: -1}).limit(5)
 })
 
 router.get('/detail/:id', (req, res) => {

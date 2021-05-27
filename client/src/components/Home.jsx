@@ -1,10 +1,12 @@
 import React from 'react'
+import Signup from './Sign_up';
+import Signin from './Sign_in';
 
-
-export default function Home() {
+export const Home=() =>{
     return (
-        <div>
-            Test
+        <div id="home" >
+<Signup/>
+<Signin/>
         </div>
     )
 }

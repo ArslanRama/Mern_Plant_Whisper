@@ -2,10 +2,9 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import {Image, Alert, Button, Modal, Form } from "react-bootstrap";
 export const Gallery = () => {
+   //! Update Plant Function
   const [plants, setPlants] = useState([])
   const [updated, setUpdated] = useState(false);
-
-  //! Update Plant Function
   const [show, setShow] = useState(false);
   const [plantData, setPlantData] = useState({
     name: '',

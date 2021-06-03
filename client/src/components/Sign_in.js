@@ -4,7 +4,7 @@ import axios from "axios";
 
 function Sign_in() {
     const [user, setUser] = useState({
-        email: '',
+        username: '',
         password: ''
     })
     // get form value inside user state
@@ -17,7 +17,7 @@ function Sign_in() {
     // Send signup data to backend and redirect to frontend
     const signIn = (e)=>{
         e.preventDefault();
-        axios.post('http://localhost:8000/user/signin', user)
+        axios.post('http://localhost:8000/user/login', user)
         .then(res=>{  
             // saving data to clients computer
             localStorage.setItem('currentUser', JSON.stringify(res.data))      
@@ -29,8 +29,8 @@ function Sign_in() {
             <Col>
                 <Form onSubmit={signIn}>
                 <Form.Group controlId="email">
-                    <Form.Label>Email:</Form.Label>
-                    <Form.Control type="email"  onChange={getValue} name="email"/>
+                    <Form.Label>Username:</Form.Label>
+                    <Form.Control type="text"  onChange={getValue} name="username"/>
                 </Form.Group>
                 <Form.Group controlId="password">
                     <Form.Label>Password</Form.Label>

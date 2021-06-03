@@ -3,11 +3,15 @@ const app = express();
 const plantRouter = require('./src/routes/plant')
 const contactRouter = require('./src/routes/contact')
 const userRouter = require('./src/routes/user')
+const cookieParser = require('cookie-parser')
 // client connection
 const cors = require('cors')
 //! MongoDB and dotenv
 require('dotenv').config()
 const mongoose = require("mongoose");
+
+// Cookie Parser
+app.use(cookieParser())
 
 const PORT = process.env.PORT || 8000;
 

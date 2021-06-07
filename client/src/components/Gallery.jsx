@@ -53,9 +53,9 @@ export const Gallery = () => {
     //! it will return the new value at /gallery
     axios.get('http://localhost:8000/plant/all')
       .then(response => {
-        console.log(response.data)
+        // console.log(response.data)
         setPlants(response.data)
-        console.log(plants);
+        // console.log(plants);
       })
   }, [plants, updateMsg])
   return (

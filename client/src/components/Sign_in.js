@@ -1,4 +1,4 @@
-import { Row, Col, Form, Button } from "react-bootstrap";
+import { Col, Form, Button } from "react-bootstrap";
 import { useState } from "react";
 import axios from "axios";
 
@@ -18,9 +18,9 @@ function Sign_in() {
     const signIn = (e)=>{
         e.preventDefault();
         axios.post('http://localhost:8000/user/login', user)
-        .then(res=>{  
+        .then(res=>{
             // saving data to clients computer
-            localStorage.setItem('currentUser', JSON.stringify(res.data))      
+            localStorage.setItem('currentUser', JSON.stringify(res.data))
             window.location.href = '/gallery';
         })
     }

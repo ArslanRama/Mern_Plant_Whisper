@@ -1,11 +1,17 @@
 const express = require('express');
 const app = express();
 const plantRouter = require('./src/routes/plant')
-// client connectection 
+const contactRouter = require('./src/routes/contact')
+const userRouter = require('./src/routes/user')
+const cookieParser = require('cookie-parser')
+// client connection
 const cors = require('cors')
 //! MongoDB and dotenv
 require('dotenv').config()
 const mongoose = require("mongoose");
+
+// Cookie Parser
+app.use(cookieParser())
 
 const PORT = process.env.PORT || 8000;
 
@@ -23,18 +29,24 @@ app.use(cors());
 
 app.use(express.json())
 
-//! routes as REST API for frontend
+//! Routing
 app.use('/plant', plantRouter);
+app.use('/user', userRouter);
+app.use('/contact', contactRouter);
+
 app.post('/user/data', (req, res) => {
     // some data from frontend react UI
     console.log(req.body)
     // Save data to database
-    // change or use data and send back message to fronend 
+    // change or use data and send back message to fronend
     res.json({
         msg: 'successfully received!',
         username: req.body.username,
+        email: req.body.email
     })
 })
+
+
 
 //! listen app with port
 app.listen(PORT, () => {

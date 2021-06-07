@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react'
-import { Navigation } from './components/navigation'
-import { Header } from './components/header'
-import { Features } from './components/features'
-import { About } from './components/about'
-import { Services } from './components/services'
-import { Plants } from './components/plants'
-import { Gallery } from './components/gallery'
-import { Testimonials } from './components/testimonials'
+import { Navigation } from './components/Navigation'
+import { Header } from './components/Header'
+import { Home } from './components/Home'
+import { About } from './components/About'
+import { Services } from './components/Services'
+import { Plants } from './components/Plant'
+import { Gallery } from './components/Gallery'
+import { Testimonials } from './components/Testimonials'
 import { Team } from './components/Team'
-import { Contact } from './components/contact'
+import { Contact } from './components/Contact'
 import JsonData from './data/data.json'
 import SmoothScroll from 'smooth-scroll'
 
@@ -27,10 +27,10 @@ const App = () => {
     <div>
       <Navigation />
       <Header data={landingPageData.Header} />
-      <Features data={landingPageData.Features} />
+      <Home data={landingPageData.Home} />
       <About data={landingPageData.About} />
-      <Plants data={landingPageData.Plants} />
       <Services data={landingPageData.Services} />
+      <Plants data={landingPageData.Plants} />
       <Gallery data={landingPageData.Gallery}/>
       <Testimonials data={landingPageData.Testimonials} />
       <Team data={landingPageData.Team} />
